@@ -23,7 +23,7 @@ public class TransacoesController {
 
         TransacoesModel transacoes = new TransacoesModel();
 
-        transacoes.setIdTransacao( (float) Math.random());
+        transacoes.setIdTransacao(Math.random() * (1000000 - 0) + 0);
 
         transacoes.setValor(valor);
 
@@ -34,6 +34,8 @@ public class TransacoesController {
         return transacoesRepository.save(transacoes);
 
     }
+
+
 
     @GetMapping(path = "/api/transacoes/{id}")
     public ResponseEntity consultarTransacoes(@PathVariable("id") Integer id) {

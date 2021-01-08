@@ -13,7 +13,7 @@ public class TransacoesModel {
 
 
     @Column(nullable = false, length = 50)
-    public Float idTransacao;
+    public Double idTransacao;
 
     @Id
     public Integer idConta;
@@ -25,11 +25,11 @@ public class TransacoesModel {
     @JsonFormat(pattern="dd/MM/yyyy")
     public Date data;
 
-    public Float getIdTransacao() {
+    public Double getIdTransacao() {
         return idTransacao;
     }
 
-    public void setIdTransacao(Float idTransacao) {
+    public void setIdTransacao(Double idTransacao) {
         this.idTransacao = idTransacao;
     }
 
