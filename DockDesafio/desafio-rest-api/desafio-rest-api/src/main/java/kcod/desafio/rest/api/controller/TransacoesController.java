@@ -23,7 +23,7 @@ public class TransacoesController {
 
         TransacoesModel transacoes = new TransacoesModel();
 
-        transacoes.setIdTransacao( (int) Math.random());
+        transacoes.setIdTransacao( (float) Math.random());
 
         transacoes.setValor(valor);
 
